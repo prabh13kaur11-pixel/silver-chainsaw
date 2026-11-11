@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="options.css">
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -23,8 +24,7 @@
       <p class="eyebrow"><span></span> A little something for you <span></span></p>
       <h1 id="headline">Hey, stranger<span class="comma">,</span><br><em>I’ve seen you somewhere.</em></h1>
       <p class="intro-copy">Curious where? Open the envelope to find out.</p>
-
-      <button class="envelope-button" id="open-note" type="button" aria-label="Open the envelope and find out where I’ve seen you" aria-expanded="false" aria-controls="letter">
+      <button class="envelope-button" id="open-note" type="button" aria-label="Open the envelope and see your options" aria-expanded="false" aria-controls="options-screen">
         <span class="envelope-shadow" aria-hidden="true"></span>
         <span class="envelope" aria-hidden="true">
           <span class="envelope-back"></span>
@@ -33,9 +33,22 @@
           <span class="envelope-flap"></span>
           <span class="wax-seal">♥</span>
         </span>
-        <span class="click-hint">Click to find out where <span aria-hidden="true">↓</span></span>
+        <span class="click-hint">Click here to know where <span aria-hidden="true">↓</span></span>
       </button>
       <p class="tiny-note">psst… this is just for you</p>
+    </section>
+
+    <section class="options-screen" id="options-screen" aria-labelledby="options-heading" aria-hidden="true" inert>
+      <p class="eyebrow"><span></span> Choose a little window <span></span></p>
+      <h2 id="options-heading">Where should we begin?</h2>
+      <p class="options-copy">Pick one. There’s no wrong answer.</p>
+      <div class="option-list">
+        <button class="option-card" type="button" data-option="letter"><span class="option-number">01</span><span class="option-name">LETTER</span><span class="option-icon" aria-hidden="true">✉</span></button>
+        <button class="option-card" type="button" data-option="memory"><span class="option-number">02</span><span class="option-name">A LITTLE MEMORY</span><span class="option-icon" aria-hidden="true">✧</span></button>
+        <button class="option-card" type="button" data-option="song"><span class="option-number">03</span><span class="option-name">A SONG</span><span class="option-icon" aria-hidden="true">♫</span></button>
+        <button class="option-card" type="button" data-option="surprise"><span class="option-number">04</span><span class="option-name">ONE LAST THING</span><span class="option-icon" aria-hidden="true">♡</span></button>
+      </div>
+      <button class="text-back" id="back-to-intro" type="button">← Back to the beginning</button>
     </section>
 
     <section class="letter-wrap" id="letter" aria-live="polite" aria-hidden="true" inert>
@@ -47,6 +60,16 @@
         <p class="letter-copy">Maybe that’s where I’ve seen you before. Or maybe some people just feel familiar from the very beginning.</p>
         <button class="reveal-button" id="reveal-secret" type="button">There’s one more thing <span aria-hidden="true">→</span></button>
         <p class="signature">With a little smile, <span>♥</span></p>
+        <button class="text-back" data-back-options type="button">← Back to options</button>
+      </article>
+    </section>
+
+    <section class="option-detail" id="option-detail" aria-live="polite" aria-hidden="true" inert>
+      <article class="detail-card">
+        <p class="letter-label" id="detail-kicker">A little something</p>
+        <h2 id="detail-title"></h2>
+        <p class="letter-copy" id="detail-copy"></p>
+        <button class="text-back" data-back-options type="button">← Back to options</button>
       </article>
     </section>
 
