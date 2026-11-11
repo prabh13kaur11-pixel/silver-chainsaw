@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8eee7">
+  <meta name="description" content="A little note for someone special.">
+  <title>Hey, stranger…</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="scene">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="sparkle sparkle-one" aria-hidden="true">✳</div>
+    <div class="sparkle sparkle-two" aria-hidden="true">✦</div>
+    <div class="sparkle sparkle-three" aria-hidden="true">✧</div>
+
+    <section class="intro" id="intro" aria-labelledby="headline">
+      <p class="eyebrow"><span></span> A little something for you <span></span></p>
+      <h1 id="headline">Hey, stranger<span class="comma">,</span><br><em>it’s you.</em></h1>
+      <p class="intro-copy">I have a feeling I’ve seen you somewhere…</p>
+
+      <button class="envelope-button" id="open-note" type="button" aria-label="Open the envelope and read your note" aria-expanded="false" aria-controls="letter">
+        <span class="envelope-shadow" aria-hidden="true"></span>
+        <span class="envelope" aria-hidden="true">
+          <span class="envelope-back"></span>
+          <span class="letter-peek"><span class="tiny-heart">♥</span></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal">♥</span>
+        </span>
+        <span class="click-hint">Click to find out where <span aria-hidden="true">↓</span></span>
+      </button>
+      <p class="tiny-note">psst… this is just for you</p>
+    </section>
+
+    <section class="letter-wrap" id="letter" aria-live="polite" aria-hidden="true" inert>
+      <article class="letter-card">
+        <div class="letter-decoration" aria-hidden="true">♡</div>
+        <p class="letter-label">A note, just for you</p>
+        <h2>I think I’ve seen you<br><em>in my daydreams.</em></h2>
+        <p class="letter-copy">In the little moments I catch myself smiling, in songs that suddenly mean a bit more, and in the kind of story I didn’t know I was hoping to find.</p>
+        <p class="letter-copy">Maybe that’s where I’ve seen you before. Or maybe some people just feel familiar from the very beginning.</p>
+        <button class="reveal-button" id="reveal-secret" type="button">There’s one more thing <span aria-hidden="true">→</span></button>
+        <p class="signature">With a little smile, <span>♥</span></p>
+      </article>
+    </section>
+
+    <section class="finale" id="finale" aria-live="polite" aria-hidden="true" inert>
+      <div class="finale-card">
+        <span class="finale-heart" aria-hidden="true">♥</span>
+        <p class="eyebrow">So, here’s the truth</p>
+        <h2>I’ve seen you<br><em>in my heart.</em></h2>
+        <p class="finale-copy">And I’m really glad our paths crossed.</p>
+        <button class="restart-button" id="start-over" type="button">Read it again <span aria-hidden="true">↺</span></button>
+      </div>
+    </section>
+
+    <footer>made with a little bit of courage <span aria-hidden="true">♡</span></footer>
+  </main>
+</body>
+</html>
